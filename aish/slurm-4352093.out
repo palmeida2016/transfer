@@ -1,0 +1,8 @@
+Running blockMesh on /mnt/beegfs/home/palmeida2016/sims/results/aish
+Running snappyHexMesh on /mnt/beegfs/home/palmeida2016/sims/results/aish
+Running extrudeMesh on /mnt/beegfs/home/palmeida2016/sims/results/aish
+Running decomposePar on /mnt/beegfs/home/palmeida2016/sims/results/aish
+Running renumberMesh in parallel on /mnt/beegfs/home/palmeida2016/sims/results/aish using 128 processes
+Running pisoFoam in parallel on /mnt/beegfs/home/palmeida2016/sims/results/aish using 128 processes
+Running reconstructParMesh on /mnt/beegfs/home/palmeida2016/sims/results/aish
+Running reconstructParunParallel on /mnt/beegfs/home/palmeida2016/sims/results/aish

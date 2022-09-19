@@ -1,0 +1,105 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+pressure        0;
+
+turbulentKE     0.0000375;
+
+turbulentOmega  0.012739266313734;
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0.1 0 0);
+
+boundaryField
+{
+    bottom
+    {
+        type            symmetry;
+    }
+    top
+    {
+        type            symmetry;
+    }
+    walls
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    inlet
+    {
+        type            fixedValue;
+        value           uniform (0.1 0 0);
+    }
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+        value           uniform (0 0 0);
+    }
+    cyl0
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);    
+    }
+    cyl1
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);    
+    }
+    cyl2
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);    
+    }
+    cyl3
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);    
+    }
+    cyl4
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);    
+    }
+    cyl5
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);    
+    }
+    cyl6
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);    
+    }
+    cyl7
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);    
+    }
+    cyl8
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);    
+    }
+    "proc.*"
+    {
+        type            processor;
+    }
+}
+
+
+// ************************************************************************* //

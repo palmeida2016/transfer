@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0.24;
+
+boundaryField
+{
+    bottom
+    {
+        type            symmetry;
+    }
+    top
+    {
+        type            symmetry;
+    }
+    walls
+    {
+        type            kqRWallFunction;
+        value           uniform 0.24;
+    }
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 0.24;
+    }
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform 0.24;
+        value           uniform 0.24;
+    }
+    cyl0
+    {
+        type            fixedValue;
+        value           uniform 0.24;
+    }
+    cyl1
+    {
+        type            fixedValue;
+        value           uniform 0.24;
+    }
+    cyl2
+    {
+        type            fixedValue;
+        value           uniform 0.24;
+    }
+    cyl3
+    {
+        type            fixedValue;
+        value           uniform 0.24;
+    }
+    cyl4
+    {
+        type            fixedValue;
+        value           uniform 0.24;
+    }
+    cyl5
+    {
+        type            fixedValue;
+        value           uniform 0.24;
+    }
+    cyl6
+    {
+        type            fixedValue;
+        value           uniform 0.24;
+    }
+    cyl7
+    {
+        type            fixedValue;
+        value           uniform 0.24;
+    }
+    cyl8
+    {
+        type            fixedValue;
+        value           uniform 0.24;
+    }
+    "proc.*"
+    {
+        type            processor;
+    }
+}
+
+
+// ************************************************************************* //
